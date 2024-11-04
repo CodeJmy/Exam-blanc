@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Page de Contact</title>
+</head>
+<body>
+    <header class="header">
+        <!-- Titre -->
+         <h1>CV - CONTACT</h1>
+    </header>
+        <!-- La sidebar -->
+         <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" title="CV">CV</a></li>
+                    <li><a href="contact.html" title="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+    <!-- Forme -->
+     <form action="exoblanc.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Informations personnel</legend>
+            <!-- civilite -->
+             <label>Civilité :</label>
+            <input type="radio" name="sexe" id="Monsieur" value="Monsieur">Monsieur
+            <input type="radio" name="sexe" id="Madame" value="Madame">Madame
+            <input type="radio" name="sexe" id="Autres" value="Autres">Autres
+            <!-- Nom -->
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <!-- Prenom -->
+            <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" name="prenom" required>
+            
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+            
+            <!-- Numero telephone -->
+            <label for="telephone">N°Tel</label>
+            <input type="text" id="telephone" name="telephone" required>
+            
+            <!-- Adresse -->
+            <label>Adresse N°</label>
+            <input type="text" name="numero">
+            
+            <!-- Rue -->
+            <input type="radio" name="genre" id="rue" value="rue">
+            <label for="rue">Rue</label>
+
+            <!-- Boulvard -->
+            <input type="radio" name="genre" id="boulvard" value="boulvard">
+            <label for="boulvard">Boulvard</label>
+
+            <!-- Place -->
+            <input type="radio" name="genre" id="place" value="place">
+            <label for="place">Place</label>
+
+            <!-- Allée -->
+            <input type="radio" name="genre" id="allee" value="allee">
+            <label for="allee">Allée</label>
+
+            <!-- Avenue -->
+            <input type="radio" name="genre" id="avenue" value="avenue">
+            <label for="avenue">Avenue</label>
+
+            <!-- Autres -->
+            <input type="radio" name="genre" id="autres" value="autres">
+            <label for="autres">Autres</label>
+            <input type="text" name="adresse">
+            
+            <!-- ville -->
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" name="Ville">
+
+            <!-- code postal -->
+            <label for="codepostale">Code Postal</label>
+            <input type="text" id="codepostale" name="codepostale">
+        </fieldset>  
+    </form>
+    <fieldset>
+        <!-- Demande -->
+         <label for="demande">Votre message par rapport au :</label>
+         <select name="choix" id="demande">
+            <optgroup label="demande">
+                <option value="front">Front-end</option>
+                <option value="backend">Back-end</option>
+                <option value="fullstack">Full-stack</option>
+            </optgroup>
+        </select>
+        <!-- Commentaires -->
+         <textarea
+         rows="4"
+         cols="50" 
+         name="comment"
+         id="comment"
+         placeholder="Saisissez votre demande içi">
+        </textarea>
+        <!-- bouton -->
+         <button type="reset">Annuler</button>
+         <button type="submit">Envoyer</button>
+         <label for="newsletter"> Abonné vous !</label>
+         <input type="checkbox" name="abonnement" id="newsletter">
+        </fieldset>
+        <footer class="footer">
+            <div class="contact">
+                <p><a href="contact.html"></a>&copy;CV - Mentions légales - Tout droits reservés.</p>
+            </div>
+        </footer>
+    </body>
+    </html>

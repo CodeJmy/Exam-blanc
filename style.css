@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Taille de l'image */
+.profil img {
+    width: 30%;
+}
+/* Tableau de bord */
+.dashboard {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "sidebar header header"
+    "main-content experience formations"
+    "article competence interet "
+    "footer footer footer";
+    grid-gap: 10%;
+    width: 100%;
+}
+/* header */
+.header {
+    grid-area: header;
+    padding: 1%;
+    border: 1px solid black;
+    background-image: url(imagedev.jpg);
+}
+/* modif h1 */
+.header h1 {
+    text-align: center;
+    color:azure;
+}
+/* modif h2 dans profil */
+.profil h2 {
+    color: rgb(9, 74, 101);
+}
+/* modif p dans profil */
+.profil p {
+    color: rgb(9, 74, 101);
+}
+.sidebar {
+    grid-area: sidebar;
+    padding: 1%;
+    background-color: rgb(37, 37, 37);
+}
+
+.sidebar nav ul {
+    display: grid;
+    gap:30%;
+    list-style-type: none;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    padding: 2%;
+    color: azure;
+    font-size:larger;
+}
+
+.main-content {
+    grid-area: main-content;
+    padding: 2%;
+    text-align: center;
+}
+
+strong {
+    color: rgb(9, 74, 101)
+}
+.experience {
+    grid-area: experience;
+}
+
+h3 {
+    color: rgb(205, 2, 79);
+}
+
+p {
+    color: azure;
+}
+
+.formations {
+    grid-area: formations;
+}
+
+.interet {
+    grid-area: interet;
+}
+
+.interet li {
+    color: azure;
+}
+
+.article {
+    grid-area: article;
+    color: rgb(205, 2, 79)
+}
+.competence ul li {
+    color:azure;
+}
+.experience, .article, .interet, .formations, .competence {
+    background-color:rgb(35, 36, 38);
+    border-radius: 20px;
+    padding: 2%;
+}
+.footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: small;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "main-content"
+        "competence"
+        "experience"
+        "formations"
+        "interet"
+        "article"
+        "footer";
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "sidebar header"
+        "main-content competence"
+        "formations experience"
+        "interet article"
+        "footer footer";
+    }
+}
