@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="style.css">
     <title>Page de Contact</title>
 </head>
-<body>
-    <header class="header">
+<body class="dashboard2">
+    <header class="header2">
         <!-- Titre -->
          <h1>CV - CONTACT</h1>
     </header>
         <!-- La sidebar -->
-         <aside class="sidebar">
+         <aside class="sidebar2">
             <nav>
                 <ul>
                     <li><a href="index.html" title="CV">CV</a></li>
@@ -25,28 +25,30 @@
         <fieldset>
             <legend>Informations personnel</legend>
             <!-- civilite -->
-             <label>Civilité :</label>
-            <input type="radio" name="sexe" id="Monsieur" value="Monsieur">Monsieur
-            <input type="radio" name="sexe" id="Madame" value="Madame">Madame
-            <input type="radio" name="sexe" id="Autres" value="Autres">Autres
+             <label class="civilite">Civilité :
+                <input type="radio" name="sexe" id="Monsieur" value="Monsieur">Monsieur
+                <input type="radio" name="sexe" id="Madame" value="Madame">Madame
+                <input type="radio" name="sexe" id="Autres" value="Autres">Autres
+            </label>
+
             <!-- Nom -->
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>
             
             <!-- Prenom -->
-            <label for="prenom">Prenom</label>
+            <label for="prenom">Prenom :</label>
             <input type="text" id="prenom" name="prenom" required>
             
             <!-- Email -->
-            <label for="email">Email</label>
+            <label for="email">Email :</label>
             <input type="text" id="email" name="email" required>
             
             <!-- Numero telephone -->
-            <label for="telephone">N°Tel</label>
+            <label for="telephone">N°Tel :</label>
             <input type="text" id="telephone" name="telephone" required>
             
             <!-- Adresse -->
-            <label>Adresse N°</label>
+            <label>Adresse N° :</label>
             <input type="text" name="numero">
             
             <!-- Rue -->
@@ -112,5 +114,5 @@
                 <p><a href="contact.html"></a>&copy;CV - Mentions légales - Tout droits reservés.</p>
             </div>
         </footer>
-    </body>
-    </html>
+</body>
+</html>

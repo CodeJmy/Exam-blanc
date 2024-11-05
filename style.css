@@ -1,3 +1,4 @@
+/* Police de l'ensemble */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -22,8 +23,8 @@ body {
 .header {
     grid-area: header;
     padding: 1%;
-    border: 1px solid black;
     background-image: url(imagedev.jpg);
+    border-radius: 10px;
 }
 /* modif h1 */
 .header h1 {
@@ -38,76 +39,96 @@ body {
 .profil p {
     color: rgb(9, 74, 101);
 }
+/* Navigation */
 .sidebar {
     grid-area: sidebar;
-    padding: 1%;
     background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    width: 40%;
+    padding: 1%;
 }
-
+/*  */
 .sidebar nav ul {
     display: grid;
-    gap:30%;
+    gap: 10%;
     list-style-type: none;
+    padding: 0;
 }
-
+/* Positionnement de CV et Contact */
+.sidebar nav ul li {
+    text-align: center;
+    padding: 15px;
+}
+/* Couleur des liens */
 .sidebar nav ul li a {
     text-decoration: none;
     padding: 2%;
     color: azure;
     font-size:larger;
 }
-
+/* hover des liens de nav */
+.sidebar nav ul li a:hover {
+    background-color: #444;
+    display: block;
+    padding: 1%;
+    border-radius: 5px;
+}
+/* Alignement centrale du main  */
 .main-content {
     grid-area: main-content;
     padding: 2%;
     text-align: center;
 }
-
+/* Couleur des strong */
 strong {
     color: rgb(9, 74, 101)
 }
+/* grid area de la div experience */
 .experience {
     grid-area: experience;
 }
-
+/* couleur des h3 */
 h3 {
     color: rgb(205, 2, 79);
 }
-
+/* couleur des p */
 p {
     color: azure;
 }
-
+/* grid formations de la div formations */
 .formations {
     grid-area: formations;
 }
-
+/* grid-area de la div interet */
 .interet {
     grid-area: interet;
 }
-
+/* couleur */
 .interet li {
     color: azure;
 }
-
+/* couleur */
 .article {
     grid-area: article;
     color: rgb(205, 2, 79)
 }
+/* couleur des li */
 .competence ul li {
     color:azure;
 }
+/* Couleur de fond des DIV avec border et un pad */
 .experience, .article, .interet, .formations, .competence {
     background-color:rgb(35, 36, 38);
     border-radius: 20px;
     padding: 2%;
 }
+/* footer */
 .footer {
     grid-area: footer;
     text-align: center;
     font-size: small;
 }
-
+/* Responsivité a 1 colonne en dessous de 768px */
 @media (max-width: 768px) {
     .dashboard {
         grid-template-columns: 1fr;
@@ -123,7 +144,7 @@ p {
         "footer";
     }
 }
-
+/* Responsive en 2 colonnes entre 769px et 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
     .dashboard {
         grid-template-columns: 1fr 1fr;
@@ -134,4 +155,115 @@ p {
         "interet article"
         "footer footer";
     }
+}
+/* Disposition du header */
+.header2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-image: url(imagedev.jpg);
+    color: #fff;
+    margin: 1em;
+}
+/* Disposition de la navigation au centre et pas d'apparence de puce */
+.sidebar2 ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1em;
+    padding: 1em;
+}
+/* Espacement de CV et Contact */
+.sidebar2 ul li {
+    margin-left: 2em;
+}
+/* Aucune décoration au texte, modification taille et couleur */
+.sidebar2 ul li a {
+    text-decoration: none;
+    font-size: 2em;
+    color: rgb(9, 74, 101);
+}
+/* Sidebar hover */
+.sidebar2 ul li a:hover {
+    text-decoration: underline;
+}
+/* Disposition du formulaire */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Couleur et taille du contour de Information personnel */
+fieldset {
+    border: 1px solid #0078d4;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+}
+/* Couleur et taille de Information personnel */
+legend {
+    font-size: 1.2em;
+    color: #0078d4;
+}
+/* Le fieldset avec son contenu */
+fieldset, .civilite, #nom, #prenom, #email, #N°Tel, #telephone {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 1%;
+    padding: 1;
+}
+/* Taille des Input, du textarea et de la barre select */
+input[type="text"], textarea, select {
+    width: 98%;
+    padding: 1%;
+    margin-bottom: 1%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Radio et checkbox */
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 1%;
+}
+
+/* Bouton */
+button {
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+/* couleur du bouton submit */
+button[type="submit"] {
+    background-color: #28a745;
+}
+/* couleur du bouton reset */
+button[type="reset"] {
+    background-color: #dc3545;
+}
+/* Opacité des bouton */
+button:hover {
+    opacity: 0.9;
+}
+/* Footer */
+.footer {
+    background-color: rgb(35, 36, 38);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+    margin: 1em;
+}
+/* Marge du P dans le footer */
+.footer p {
+    margin: 0;
 }
